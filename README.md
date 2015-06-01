@@ -10,7 +10,7 @@ Usage
 
 Issue
 
-    brew tap 10sr/forme
+    brew tap 10sr/pkg
 
 to enable this repository.
 
