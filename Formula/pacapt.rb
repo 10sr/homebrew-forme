@@ -7,6 +7,7 @@ class Pacapt < Formula
   sha256 '2d595f1f794094f5985a1d18ed51bfdfa156ca99f24e7fd5b6e76a9bca86f094'
 
   def install
+    system "mkdir", "-p", "#{prefix}/bin"
     system "install" "-m" "755" "./pacapt" "#{prefix}/bin/pacapt"
   end
 end
