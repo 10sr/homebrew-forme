@@ -1,6 +1,6 @@
 require 'formula'
 
-class Tor < Formula
+class Pacapt < Formula
   homepage 'http://github.com/icy/pacapt.git'
 
   url 'https://github.com/icy/pacapt/archive/v2.0.5.tar.gz'
