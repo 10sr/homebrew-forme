@@ -5,6 +5,17 @@ homebrew-forme
 Homebrew Formulae just for me.
 
 
+Usage
+-----
+
+Issue
+
+    brew tap 10sr/forme
+
+to enable this repository.
+
+
+
 References
 ----------
 
