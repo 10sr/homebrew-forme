@@ -9,7 +9,7 @@ class Erutaso < Formula
   version "5.0"
 
   def install
-    system 'make'
-    system 'install', '-Dm', '755', './erutaso', '#{prefix}/bin/erutaso'
+    system "make"
+    system "install", "-Dm", "755", "./erutaso", "#{prefix}/bin/erutaso"
   end
 end
