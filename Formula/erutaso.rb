@@ -10,6 +10,6 @@ class Erutaso < Formula
 
   def install
     system 'make'
-    system 'install' '-Dm' '755' './erutaso' '#{prefix}/bin/erutaso'
+    system 'install', '-Dm', '755', './erutaso', '#{prefix}/bin/erutaso'
   end
 end
