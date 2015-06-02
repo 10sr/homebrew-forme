@@ -12,7 +12,11 @@ Issue
 
     brew tap 10sr/pkg
 
-to enable this repository.
+to enable this repository, or
+
+    brew install 10sr/pkg/erutaso
+    
+to install one package directly.
 
 
 
