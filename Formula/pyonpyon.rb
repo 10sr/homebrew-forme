@@ -1,6 +1,6 @@
 require 'formula'
 
-class PyonPyon < Formula
+class Pyonpyon < Formula
   homepage 'https://github.com/sgymtic/sl/tree/pyonpyon'
 
   url 'https://github.com/sgymtic/sl.git', :using => :git,
