@@ -1,8 +1,8 @@
-homebrew-forme
-===============
+homebrew-pkg
+============
 
 
-Homebrew Formulae just for me.
+Private Homebrew Formulae repository.
 
 
 Usage
