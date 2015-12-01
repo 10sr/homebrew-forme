@@ -1,9 +1,8 @@
-require 'formula'
-
 class Erutaso < Formula
-  homepage 'http://github.com/sgymtic/sl.git'
+  desc "Improve your good habit of mistyping"
+  homepage "https://github.com/sgymtic/sl.git"
 
-  url 'https://github.com/sgymtic/sl.git', :using => :git,
+  url "https://github.com/sgymtic/sl.git",
       :revision => "ed5b15fd3c68946cff8dee629474f7fe01d67c56"
 
   version "5.0"
@@ -11,5 +10,9 @@ class Erutaso < Formula
   def install
     system "make"
     bin.install "erutaso"
+  end
+
+  test do
+    system "#{bin}/erutaso"
   end
 end
