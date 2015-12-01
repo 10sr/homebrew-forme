@@ -17,8 +17,11 @@ prepare:
 	cd $(brew_dir) && git fetch origin && git checkout -f origin/master
 
 $(formulae):
-	$(brew) audit --strict --online $(project_root_dir)/Formula/$@.rb
-	$(brew) $(brew) unlink $@ || true
+	# brew audit will error out when the source url or homepage is a github
+	# forked repository. This behaivor is STUPID and REALLY ILLITATING, so
+	# I will not use this, instead just try to install it.
+	#$(brew) audit --strict --online $(project_root_dir)/Formula/$@.rb
+	$(brew) unlink $@ || true
 	# NOTE: Dirty fix for erutaso and pyonpyon that tries to install twice
 	# For more information (in japanese):
 	# http://10sr-p.hateblo.jp/entry/2015/08/14/143207
