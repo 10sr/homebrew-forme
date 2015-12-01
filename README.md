@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/10sr/homebrew-pkg.svg)](https://travis-ci.org/10sr/homebrew-pkg)
+
+
 homebrew-pkg
 ============
 
@@ -15,7 +18,7 @@ Issue
 to enable this repository, or
 
     brew install 10sr/pkg/erutaso
-    
+
 to install one package directly.
 
 
