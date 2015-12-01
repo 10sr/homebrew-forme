@@ -20,6 +20,7 @@ $(formulae):
 	# brew audit will error out when the source url or homepage is a github
 	# forked repository. This behaivor is STUPID and REALLY ILLITATING, so
 	# I will not use this, instead just try to install it.
+	# https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/cmd/audit.rb#L506
 	#$(brew) audit --strict --online $(project_root_dir)/Formula/$@.rb
 	$(brew) unlink $@ || true
 	# NOTE: Dirty fix for erutaso and pyonpyon that tries to install twice
