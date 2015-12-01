@@ -3,6 +3,8 @@ project_root_dir := $(PWD)
 brew_dir ?= $(project_root_dir)/.brew
 brew_repository ?= https://github.com/Homebrew/linuxbrew.git
 
+brew := PATH=$(brew_dir)/bin:$$PATH brew
+
 formulae := $(wildcard Formula/*.rb)
 formulae := $(formulae:Formula/%.rb=%)
 
@@ -15,9 +17,10 @@ prepare:
 	cd $(brew_dir) && git fetch origin && git checkout -f origin/master
 
 $(formulae):
-	PATH=$(brew_dir)/bin:$$PATH brew unlink $@
+	$(brew) audit $(project_root_dir)/Formula/$@.rb
+	$(brew) $(brew) unlink $@ || true
 	# NOTE: Dirty fix for erutaso and pyonpyon that tries to install twice
 	# For more information (in japanese):
 	# http://10sr-p.hateblo.jp/entry/2015/08/14/143207
-	PATH=$(brew_dir)/bin:$$PATH brew install $(project_root_dir)/Formula/$@.rb || \
-		PATH=$(brew_dir)/bin:$$PATH brew install $(project_root_dir)/Formula/$@.rb
+	$(brew) install $(project_root_dir)/Formula/$@.rb || \
+		$(brew) install $(project_root_dir)/Formula/$@.rb
