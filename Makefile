@@ -15,4 +15,8 @@ prepare:
 	cd $(brew_dir) && git fetch origin && git checkout -f origin/master
 
 $(formulae):
-	PATH=$(brew_dir)/bin:$$PATH brew install $(project_root_dir)/Formula/$@.rb
+	# NOTE: Dirty fix for erutaso and pyonpyon that tries to install twice
+	# For more information (in japanese):
+	# http://10sr-p.hateblo.jp/entry/2015/08/14/143207
+	PATH=$(brew_dir)/bin:$$PATH brew install $(project_root_dir)/Formula/$@.rb || \
+		PATH=$(brew_dir)/bin:$$PATH brew install $(project_root_dir)/Formula/$@.rb
