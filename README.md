@@ -5,7 +5,7 @@ homebrew-pkg
 ============
 
 
-Private Homebrew Formulae repository.
+Personal Homebrew Formulae repository.
 
 
 Usage
