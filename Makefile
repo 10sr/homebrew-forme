@@ -17,7 +17,7 @@ prepare:
 	cd $(brew_dir) && git fetch origin && git checkout -f origin/master
 
 $(formulae):
-	$(brew) audit $(project_root_dir)/Formula/$@.rb
+	$(brew) audit --strict --online $(project_root_dir)/Formula/$@.rb
 	$(brew) $(brew) unlink $@ || true
 	# NOTE: Dirty fix for erutaso and pyonpyon that tries to install twice
 	# For more information (in japanese):
