@@ -9,6 +9,6 @@ class BleSh < Formula
 
   def install
     system "make"
-    lib.install "out/ble.sh"
+    lib.install "out" => "ble-sh"
   end
 end
