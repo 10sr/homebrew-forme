@@ -7,7 +7,10 @@ class BleSh < Formula
 
   version "0.1.4"
 
+  depends_on "gawk"
+
   def install
+    system "sed", "-ie", "s|^#!/usr/bin/gawk|#!/usr/bin/env gawk|", "ext/mwg_pp.awk"
     system "make"
     lib.install "out" => "ble-sh"
   end
