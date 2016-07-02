@@ -10,7 +10,7 @@ class BleSh < Formula
   depends_on "gawk" => :build
 
   def install
-    system "sed", "-ie", "s|^#!/usr/bin/gawk|#!/usr/bin/env gawk|", "ext/mwg_pp.awk"
+    system "sed", "-ie", "s|^#!/usr/bin/gawk|#!/usr/bin/env awk|", "ext/mwg_pp.awk"
     system "make"
     lib.install "out" => "ble-sh"
   end
