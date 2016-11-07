@@ -23,8 +23,4 @@ $(formulae):
 	# https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/cmd/audit.rb#L506
 	#$(brew) audit --strict --online $(project_root_dir)/Formula/$@.rb
 	$(brew) unlink $@ || true
-	# NOTE: Dirty fix for erutaso and pyonpyon that tries to install twice
-	# For more information (in japanese):
-	# http://10sr-p.hateblo.jp/entry/2015/08/14/143207
-	$(brew) install $(project_root_dir)/Formula/$@.rb || \
-		$(brew) install $(project_root_dir)/Formula/$@.rb
+	$(brew) install $(project_root_dir)/Formula/$@.rb
