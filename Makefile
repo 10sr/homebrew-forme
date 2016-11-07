@@ -1,7 +1,7 @@
 project_root_dir := $(PWD)
 
 brew_dir ?= $(project_root_dir)/.brew
-brew_repository ?= https://github.com/Homebrew/linuxbrew.git
+brew_repository ?= https://github.com/Linuxbrew/brew.git
 
 brew := PATH=$(brew_dir)/bin:$$PATH brew
 
