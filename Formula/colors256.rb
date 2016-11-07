@@ -1,9 +1,9 @@
 class Colors256 < Formula
   desc "Print 256 color table"
-  homepage "https://gist.github.com/10sr/6852331"
+  homepage "https://github.com/alghanmi/terminal_color_test"
 
-  url "https://gist.github.com/10sr/6852331.git",
-      :revision => "9d9d50714a4039932bb48091e111378d73c098db"
+  url "https://github.com/alghanmi/terminal_color_test.git",
+      :revision => "372ee39a02264025c72f69d66815ddeb6d063242"
 
   version "0.1"
 

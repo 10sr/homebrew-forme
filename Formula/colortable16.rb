@@ -1,9 +1,9 @@
 class Colortable16 < Formula
   desc "Print 16 color table"
-  homepage "http://gist.github.com/6852317"
+  homepage "https://github.com/alghanmi/terminal_color_test"
 
-  url "https://gist.github.com/6852317.git",
-      :revision => "84d8fc4ce9d3a18f1ccdd81f049abe9b13aff4ba"
+  url "https://github.com/alghanmi/terminal_color_test.git",
+      :revision => "372ee39a02264025c72f69d66815ddeb6d063242"
 
   version "0.1"
 
