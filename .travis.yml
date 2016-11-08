@@ -6,6 +6,6 @@ cache:
 before_install:
   - make prepare
 script:
-  - make check brew_dir=.brew
+  - make check brew_dir=$TRAVIS_BUILD_DIR/.brew
 notifications:
   email: 8slashes+travis-ci@gmail.com
