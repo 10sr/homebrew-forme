@@ -30,4 +30,4 @@ $(formulae):
 	# https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/cmd/audit.rb#L506
 	#$(brew) audit --strict --online $(project_root_dir)/Formula/$@.rb
 	$(brew) uninstall $@ || true
-	$(brew) install -v $(project_root_dir)/Formula/$@.rb
+	$(brew) install $(project_root_dir)/Formula/$@.rb
