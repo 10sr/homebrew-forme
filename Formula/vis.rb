@@ -7,6 +7,7 @@ class Vis < Formula
 
   version "0.2"
 
+  depends_on "ncurses"
   depends_on "libtermkey"
   depends_on "lua"
 
