@@ -1,0 +1,14 @@
+class Ikiwiki < Formula
+  desc "wiki/blog compiler"
+  homepage "http://ikiwiki.info"
+
+  url "http://ftp.de.debian.org/debian/pool/main/i/ikiwiki/ikiwiki_3.20160509.tar.gz"
+
+  version "3.20160509"
+
+  def install
+    system "perl", "Makefile.PL", "PREFIX=#{prefix}", "INSTALL_BASE=", "INSTALLDIRS=vendor"
+    system "make"
+    system "make", "install"
+  end
+end
