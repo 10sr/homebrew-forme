@@ -1,9 +1,14 @@
 project_root_dir := $(PWD)
+uname := $(shell uname -s)
+
+ifeq ($(uname),Darwin)
+brew_repository ?= https://github.com/Homebrew/brew.git
+else
+brew_repository ?= https://github.com/Linuxbrew/brew.git
+endif
 
 brew_dir ?= $(project_root_dir)/.brew
-brew_repository ?= https://github.com/Linuxbrew/brew.git
-
-brew := PATH=$(brew_dir)/bin:$$PATH brew
+brew := PATH=$(brew_dir)/bin:$$PATH $(brew_dir)/bin/brew
 
 formulae := $(wildcard Formula/*.rb)
 formulae := $(formulae:Formula/%.rb=%)
@@ -15,7 +20,8 @@ check: prepare $(formulae)
 prepare:
 	mkdir -p $(brew_dir)
 	test -d $(brew_dir)/.git || git clone $(brew_repository) $(brew_dir) --depth=5
-	cd $(brew_dir) && git fetch origin && git checkout -f origin/master
+	#cd $(brew_dir) && git fetch origin && git checkout -f origin/master
+	$(brew) upgrade
 
 $(formulae):
 	# brew audit will error out when the source url or homepage is a github
