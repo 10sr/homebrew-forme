@@ -1,7 +1,11 @@
+---
 language: shell
+cache:
+  directories:
+    - .brew
 before_install:
   - make prepare
 script:
-  - make check
+  - make check brew_dir=.brew
 notifications:
   email: 8slashes+travis-ci@gmail.com

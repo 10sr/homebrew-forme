@@ -13,6 +13,7 @@ formulae := $(formulae:Formula/%.rb=%)
 check: prepare $(formulae)
 
 prepare:
+	mkdir -p $(brew_dir)
 	test -d $(brew_dir) || git clone $(brew_repository) $(brew_dir) --depth=5
 	cd $(brew_dir) && git fetch origin && git checkout -f origin/master
 
