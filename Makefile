@@ -23,5 +23,5 @@ $(formulae):
 	# I will not use this, instead just try to install it.
 	# https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/cmd/audit.rb#L506
 	#$(brew) audit --strict --online $(project_root_dir)/Formula/$@.rb
-	$(brew) unlink $@ || true
+	$(brew) uninstall $@ || true
 	$(brew) install $(project_root_dir)/Formula/$@.rb
