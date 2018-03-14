@@ -6,6 +6,7 @@ class Bin < Formula
   version "HEAD"
 
   def install
+    bin.mkpath
     bin.install Dir["bin/*"]
   end
 
