@@ -6,8 +6,6 @@ class Bin < Formula
   version "HEAD"
 
   def install
-    mv "bin/git-edit-index.sh", "git-edit-index"
-    bin.install "git-edit-index"
     # prefix.install_metafiles
     # libexec.install Dir["*"]
     # Dir.glob("bin/*") do |script|
@@ -15,6 +13,7 @@ class Bin < Formula
     # end
     # # bin.install_symlink Dir["#{libexec}/bin/*"]
     # bin.install "bin/save.sh"
+    bin.install "bin/git-edit-index.sh" => "git-edit-index"
   end
 
   test do
