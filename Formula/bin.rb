@@ -5,6 +5,7 @@ class Bin < Formula
   url "https://github.com/10sr/bin.git",
       :using => :git,
       :branch => "master"
+  version "master"
 
   def install
     bin.install Dir["bin/*"]
