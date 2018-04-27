@@ -8,14 +8,7 @@ class Bin < Formula
   version "master"
 
   def install
-    # prefix.install_metafiles
-    # libexec.install Dir["*"]
-    # Dir.glob("bin/*") do |script|
-    #   bin.install_symlink script
-    # end
-    # # bin.install_symlink Dir["#{libexec}/bin/*"]
     bin.install Dir["bin/*"]
-    # bin.install "bin/git-edit-index.sh" => "git-edit-index"
   end
 
   test do
