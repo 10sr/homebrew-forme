@@ -13,7 +13,7 @@ class Bin < Formula
     # end
     # # bin.install_symlink Dir["#{libexec}/bin/*"]
     # bin.install "bin/save.sh"
-    bin.install_symlink "bin/git-edit-index.sh" => "git-edit-index"
+    bin.install "bin/git-edit-index.sh" => "git-edit-index"
   end
 
   test do
