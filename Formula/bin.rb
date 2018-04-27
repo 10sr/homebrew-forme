@@ -2,7 +2,7 @@ class Bin < Formula
   desc "10sr bin files"
   homepage "https://github.com/10sr/bin"
 
-  url "https://github.com/10sr/bin.git",
+  head "https://github.com/10sr/bin.git",
       :using => :git,
       :branch => "master"
   version "master"
