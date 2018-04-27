@@ -2,8 +2,10 @@ class Bin < Formula
   desc "10sr bin files"
   homepage "https://github.com/10sr/bin"
 
-  url "https://github.com/10sr/bin.git", :using => :git
-  version "HEAD"
+  url "https://github.com/10sr/bin.git",
+      :using => :git,
+      :revision => "master"
+  version "master"
 
   def install
     # prefix.install_metafiles
