@@ -2,9 +2,9 @@ class Bin < Formula
   desc "10sr bin files"
   homepage "https://github.com/10sr/bin"
 
-  head "https://github.com/10sr/bin.git",
+  url "https://github.com/10sr/bin.git",
       :using => :git,
-      :revision => "master"
+      :branch => "master"
 
   def install
     bin.install Dir["bin/*"]
