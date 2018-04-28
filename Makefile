@@ -10,8 +10,8 @@ endif
 brew_dir ?= $(project_root_dir)/.brew
 brew := PATH=$(brew_dir)/bin:$$PATH $(brew_dir)/bin/brew
 
-formulae := $(wildcard Formula/*.rb)
-formulae := $(formulae:Formula/%.rb=%)
+formulae_files := $(wildcard Formula/*.rb)
+formulae := $(formulae_files:Formula/%.rb=%)
 
 .PHONY: check prepare $(formulae)
 
@@ -30,4 +30,4 @@ $(formulae):
 	# https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/cmd/audit.rb#L506
 	#$(brew) audit --strict --online $(project_root_dir)/Formula/$@.rb
 	$(brew) uninstall $@ || true
-	$(brew) install $(project_root_dir)/Formula/$@.rb
+	$(brew) install -v $(project_root_dir)/Formula/$@.rb

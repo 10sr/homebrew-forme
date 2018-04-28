@@ -4,7 +4,7 @@ cache:
   directories:
     - .brew
 before_install:
-  - make prepare
+  - make prepare brew_dir=$TRAVIS_BUILD_DIR/.brew
 script:
   - make check brew_dir=$TRAVIS_BUILD_DIR/.brew
 notifications:
