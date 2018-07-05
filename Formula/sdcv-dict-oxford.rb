@@ -6,7 +6,7 @@ class SdcvDictOxford < Formula
   sha256 "1c07bca79aff349fd4d86db658aa5ebe7b6b6fe7b8f90317d1150b585aacb4e5"
 
   def install
-    share.install Dir["*"]
+    pkgshare.install Dir["*"]
   end
 
   test do
