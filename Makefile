@@ -27,7 +27,7 @@ $(formulae):
 	# brew audit will error out when the source url or homepage is a github
 	# forked repository. This behaivor is STUPID and REALLY ILLITATING, so
 	# I will not use this, instead just try to install it.
-	# https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/cmd/audit.rb#L506
+	# https://github.com/Homebrew/brew/blob/master/Library/Homebrew/dev-cmd/audit.rb#L583
 	#$(brew) audit --strict --online $(project_root_dir)/Formula/$@.rb
 	$(brew) uninstall $@ || true
 	$(brew) install -v $(project_root_dir)/Formula/$@.rb
