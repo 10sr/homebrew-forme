@@ -7,6 +7,7 @@ class BleSh < Formula
 
   version "0.1.6"
 
+  # TODO: Any way to enable only on MacOS?
   depends_on "gawk" => :build
 
   def install
