@@ -3,9 +3,11 @@ require "language/go"
 class GitBug < Formula
   desc "Distributed bug tracker embedded in Git"
   homepage "https://github.com/MichaelMure/git-bug"
-  url "https://github.com/MichaelMure/git-bug/archive/0.5.0.tar.gz"
-  sha256 "b8f0033e00f3e667c6c26cceb33c73af46b24fdea15ce8e894195ef9c298726e"
+  url "https://github.com/MichaelMure/git-bug.git",
+      :revision => "0.5.0"
   head "https://github.com/MichaelMure/git-bug.git", :shallow => false
+
+  version "0.5.0"
 
   # bottle do
   #   cellar :any_skip_relocation
