@@ -1,11 +1,6 @@
 project_root_dir := $(PWD)
-uname := $(shell uname -s)
 
-ifeq ($(uname),Darwin)
 brew_repository ?= https://github.com/Homebrew/brew.git
-else
-brew_repository ?= https://github.com/Linuxbrew/brew.git
-endif
 
 brew_dir ?= $(project_root_dir)/.brew
 brew := PATH=$(brew_dir)/bin:$$PATH $(brew_dir)/bin/brew
