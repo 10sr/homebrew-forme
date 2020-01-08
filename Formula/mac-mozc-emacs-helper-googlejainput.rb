@@ -20,8 +20,8 @@ class MacMozcEmacsHelperGooglejainput < Formula
   def install
     ENV["GYP_DEFINES"] = "mac_sdk=#{MacOS.version} mac_deployment_target=#{MacOS.version}"
     cd "src" do
-      system "python2", "build_mozc.py", "gyp", "--noqt", "--branding=GoogleJapaneseInput"
-      system "python2", "build_mozc.py", "build", "-c", "Release", "unix/emacs/emacs.gyp:mozc_emacs_helper"
+      system "/usr/bin/python", "build_mozc.py", "gyp", "--noqt", "--branding=GoogleJapaneseInput"
+      system "/usr/bin/python", "build_mozc.py", "build", "-c", "Release", "unix/emacs/emacs.gyp:mozc_emacs_helper"
     end
     bin.install "src/out_mac/Release/mozc_emacs_helper"
   end
