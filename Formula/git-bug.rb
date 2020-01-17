@@ -4,10 +4,10 @@ class GitBug < Formula
   desc "Distributed bug tracker embedded in Git"
   homepage "https://github.com/MichaelMure/git-bug"
   url "https://github.com/MichaelMure/git-bug.git",
-      :revision => "0.5.0"
+      :revision => "0.6.0"
   head "https://github.com/MichaelMure/git-bug.git", :shallow => false
 
-  version "0.5.0"
+  version "0.6.0"
 
   # bottle do
   #   cellar :any_skip_relocation
