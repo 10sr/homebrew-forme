@@ -12,6 +12,6 @@ class Bin < Formula
   end
 
   test do
-    system "true"
+    system "git", "rev-parse", "HEAD"
   end
 end
