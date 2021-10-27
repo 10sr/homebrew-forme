@@ -1,6 +1,6 @@
 class Pkg10sr < Formula
   desc "My packges"
-  homepage "https://github.com/martanne/vis"
+  homepage "https://github.com/10sr/homebrew-pkg"
 
   url "https://github.com/10sr/homebrew-pkg.git",
       :tag => "master"
@@ -9,6 +9,8 @@ class Pkg10sr < Formula
 
   depends_on "micro"
   depends_on "git"
+  depends_on "bat"
+  depends_on "ripgrep"
 
   def install
     system "echo", "installed"
