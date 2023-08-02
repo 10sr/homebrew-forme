@@ -17,7 +17,7 @@ Issue
 
 to enable this repository, or
 
-    brew install 10sr/pkg/erutaso
+    brew install 10sr/pkg/bin
 
 to install one package directly.
 
